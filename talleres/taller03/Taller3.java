@@ -4,7 +4,7 @@ public class Taller3 {
     torresDeHannoiAux(n, 1, 2, 3);
   }
 
-  private static void torresDeHannoiAux(int n, int origen, int intermedio, int destino) {
+  private static void torresDeHannoiAux(int n, int origen, int destino, int intermedio) {
     if (n == 1) {
       System.out.println("Disk 1 from " + origen + " to " + destino);
     } else {
