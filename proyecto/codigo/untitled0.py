@@ -15,7 +15,7 @@ with open('csv.txt') as csv_file:
     Lista = []
     for row in csv_reader:
         if line_count == 0:
-            print('hooolaaa')
+            print('Saludos a la gran lista')
             Lista.append(row)
             line_count += 1
         else:
