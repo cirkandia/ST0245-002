@@ -3,6 +3,9 @@
 Created on Sun Feb 14 18:57:02 2021
 
 @author: johan
+Este fragmento de codigo permite la lectura de un archivo CSV y lo almacena
+en una lista la cual esta determinada para que cada elemento sea una linea del
+archivo CSV, por lo tanto cada elemento es una lista con los elemtos propios e individuales del CSV
 """
 import csv
 
