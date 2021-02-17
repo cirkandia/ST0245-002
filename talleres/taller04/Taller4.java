@@ -1,5 +1,5 @@
 
-class Taller4{
+class Taller04{
  
     public static int arrayMax(int[] array, int n) {
         int max, temp;
