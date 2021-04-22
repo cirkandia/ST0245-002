@@ -14,9 +14,18 @@ archivos= os.listdir()
 print('||||||||| Elija uno de los siguinetes archivos (.txt)|||||||||||||||||||')
 print(archivos)
 print('||||||||| ingrese el nombre ||||||||||||')
-arch = '1.txt' #input() |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+arch = '' #input() |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-
+archivos.remove('sumita.py')
+archivos.remove('csv.txt')
+archivos.remove('data set')
+archivos.remove('proyectop2.py')
+archivos.remove('untitled0.py')
+        
+        
+        
+        
+        
 with open('csv.txt') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter =',')
         line_count = 0
@@ -32,20 +41,15 @@ with open('csv.txt') as csv_file:
                 print('')
                 line_count += 1
                 print(line_count)
-                #print(Lista1.__getitem__(359))
-                # Lista1[359][0]=333
-                # Lista1[359][1]=111
-                #print(Lista.__getitem__(359).__getitem__(0))
-                #for i in Lista1:
-                    #   for j in columna:
-                        #      print(columna)
         for i in range(0, len(Lista1)):
             for j in range(0, len(Lista1[i])):
                 Lista1[i][j] = int(Lista1[i][j])
     
       
 
-with open(arch) as csv_file:
+for l in range(0, len(archivos)):
+    arch= archivos[l]
+    with open(arch) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter =',')
         line_count = 0
         SubLista = []
@@ -63,16 +67,30 @@ with open(arch) as csv_file:
         for i in range(0, len(SubLista)):
             for j in range(0, len(SubLista[i])):
                 SubLista[i][j] = int(SubLista[i][j])
-        
     
-h= len(SubLista)
-for  i in range(h):
-    for j in columna:
-        if Lista1[i][j] < SubLista[i].__len__():
-            Lista1[i][j] = 0
-        a = Lista1[i].__getitem__(j)
-        b = SubLista[i][j]
+    for i in SubLista :
+        for j in i :
+            if len(Lista1) < len(SubLista):
+                Lista1.append([0])
+            
+    h=0
+    for i in SubLista :
+        for j in range(0, len(SubLista[0])):
+            if len(Lista1[h]) < len(SubLista[0]):
+                Lista1[h].append(0)
+        h += 1
+
+
+    for i in range(0, len(SubLista)):
+        for j in range(0, len(SubLista[0])):
+            Lista1[i][j] = int((Lista1[i][j]+SubLista[i][j])/2)
+
+SubLista=[0]
+columna=[0]
+
+         
         
+
                              
 """
   
