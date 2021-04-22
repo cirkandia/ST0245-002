@@ -11,10 +11,8 @@ import os
 Lista1 = []
 SubLista = []
 archivos= os.listdir()
-print('||||||||| Elija uno de los siguinetes archivos (.txt)|||||||||||||||||||')
 print(archivos)
-print('||||||||| ingrese el nombre ||||||||||||')
-arch = '' #input() |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+arch = '' |
 
 archivos.remove('sumita.py')
 archivos.remove('csv.txt')
